@@ -18,50 +18,51 @@ const config: Config = {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-  		colors: {
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
-  			card: {
-  				DEFAULT: 'hsl(var(--card))',
-  				foreground: 'hsl(var(--card-foreground))'
-  			},
-  			popover: {
-  				DEFAULT: 'hsl(var(--popover))',
-  				foreground: 'hsl(var(--popover-foreground))'
-  			},
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
-  			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
-  			},
-  			muted: {
-  				DEFAULT: 'hsl(var(--muted))',
-  				foreground: 'hsl(var(--muted-foreground))'
-  			},
-  			accent: {
-  				DEFAULT: 'hsl(var(--accent))',
-  				foreground: 'hsl(var(--accent-foreground))'
-  			},
-  			destructive: {
-  				DEFAULT: 'hsl(var(--destructive))',
-  				foreground: 'hsl(var(--destructive-foreground))'
-  			},
-  			border: 'hsl(var(--border))',
-  			input: 'hsl(var(--input))',
-  			ring: 'hsl(var(--ring))',
-  			chart: {
-  				'1': 'hsl(var(--chart-1))',
-  				'2': 'hsl(var(--chart-2))',
-  				'3': 'hsl(var(--chart-3))',
-  				'4': 'hsl(var(--chart-4))',
-  				'5': 'hsl(var(--chart-5))'
-  			}
-  		}
-  	}
+  		// REPLACE the existing `colors: { ... }` block with this
+colors: {
+  background: '#000000',          // page background -> pure black
+  foreground: '#E9E6E2',          // main text -> warm off-white
+  card: {
+    DEFAULT: '#0b0b0b',           // card bg (slightly lighter than page)
+    foreground: '#EDE9E4'
   },
+  popover: {
+    DEFAULT: '#0b0b0b',
+    foreground: '#EDE9E4'
+  },
+  primary: {
+    DEFAULT: '#d1b891',           // Rhueyra gold (use for buttons/accents)
+    foreground: '#0b0b0b'
+  },
+  secondary: {
+    DEFAULT: '#2a2a2a',
+    foreground: '#E9E6E2'
+  },
+  muted: {
+    DEFAULT: '#151515',
+    foreground: '#BFBAB3'
+  },
+  accent: {
+    DEFAULT: '#b88f4a',
+    foreground: '#0b0b0b'
+  },
+  destructive: {
+    DEFAULT: '#ad2b2b',
+    foreground: '#fff'
+  },
+  border: '#151515',
+  input: '#0d0d0d',
+  ring: '#2b2b2b',
+  chart: {
+    '1': '#d1b891',
+    '2': '#b88f4a',
+    '3': '#8f6b2a',
+    '4': '#5b4120',
+    '5': '#34220f'
+  }
+}
+}
+},
   plugins: [require("tailwindcss-animate")],
 };
 export default config;
